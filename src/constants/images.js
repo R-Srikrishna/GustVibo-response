@@ -1,83 +1,73 @@
-import bgGestvibo from "../Images/bgGestvibo.jpeg";
-import chefimage from "../Images/chefimage.webp";
-import gallery1 from "../Images/gallery1.jpeg";
-import gallery2 from "../Images/gallery2.jpg";
-import gallery3 from "../Images/gallery3.jpeg";
-import gallery5 from "../Images/gallery5.png";
-import welcomepng from "../Images/welcomepng.png";
-import restaurantlogo from "../Images/restaurantlogo.png";
-import gustvibologo from "../Images/gustvibologo (2).png";
-import gustviblogo2 from "../Images/gustviblogo2.png";
-import logoGust from "../Images/logoGust.png";
-import meals from "../Images/meals.mp4";
-import spoon from "../Images/spoon.png";
-import menu from "../Images/menu.png";
-import sign from "../Images/sign.png";
-import award1 from "../Images/award1.png";
-import award2 from "../Images/award2.png";
-import award3 from "../Images/award3 (2).png";
-import award4 from "../Images/award4.png";
-import FindUs from "../Images/FindUs (2).png";
-import quotes from "../Images/quotes.png";
-import image1 from "../Images/image1.png";
-import image2 from "../Images/image2.jpg";
-import image3 from "../Images/image3.jpg";
-import image4 from "../Images/image4.jpg";
-import image5 from "../Images/image5.jpg";
-import image6 from "../Images/image6.png";
-import image7 from "../Images/image7.png";
-import image8 from "../Images/image8.png";
-import image9 from "../Images/image9.png";
-import image10 from "../Images/image10.png";
-import image11 from "../Images/image11.png";
-import image12 from "../Images/image12.png";
-import image13 from "../Images/image13.png";
-import image14 from "../Images/image14.png";
+/**
+ * Image Assets Configuration
+ * 
+ * All images are stored in the public/images folder and accessed via public paths.
+ * This approach allows images to be referenced directly without webpack bundling.
+ */
 
+// Base path for all images in the public folder
+const IMAGES_PATH = '/images';
 
-import resimage1 from "../Images/resimage1.jpeg"; 
-import resimage2 from "../Images/resimage2.jpeg";
-import resimage3 from "../Images/resimage3.jpeg";
-import resimage4 from "../Images/resimage4.jpeg";
-
-export default {
-    bgGestvibo,
-    chefimage,
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery5,
-    welcomepng,
-    restaurantlogo,
-    gustvibologo,
-    gustviblogo2,
-    logoGust,
-    meals,
-    spoon,
-    menu,
-    sign,
-    award1,
-    award2,
-    award3,
-    award4,
-    FindUs,
-    quotes,
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
-    image11,
-    image12,
-    image13,
-    image14,
-    resimage1,  
-    resimage2,
-    resimage3,
-    resimage4
+// Image asset paths - organized by category for better maintainability
+const imageAssets = {
+  // Background images
+  bgGestvibo: `${IMAGES_PATH}/bgGestvibo.jpeg`,
+  
+  // Chef and restaurant images
+  chefimage: `${IMAGES_PATH}/chefimage.webp`,
+  restaurantlogo: `${IMAGES_PATH}/restaurantlogo.png`,
+  welcomepng: `${IMAGES_PATH}/welcomepng.png`,
+  
+  // Gallery images
+  gallery1: `${IMAGES_PATH}/gallery1.jpeg`,
+  gallery2: `${IMAGES_PATH}/gallery2.jpg`,
+  gallery3: `${IMAGES_PATH}/gallery3.jpeg`,
+  gallery5: `${IMAGES_PATH}/gallery5.png`,
+  
+  // Logo images
+  gustvibologo: `${IMAGES_PATH}/gustvibologo (2).png`,
+  gustviblogo2: `${IMAGES_PATH}/gustviblogo2.png`,
+  logoGust: `${IMAGES_PATH}/logoGust.png`,
+  
+  // Media files
+  meals: `${IMAGES_PATH}/meals.mp4`,
+  
+  // UI elements
+  spoon: `${IMAGES_PATH}/spoon.png`,
+  menu: `${IMAGES_PATH}/menu.png`,
+  sign: `${IMAGES_PATH}/sign.png`,
+  quotes: `${IMAGES_PATH}/quotes.png`,
+  
+  // Award images
+  award1: `${IMAGES_PATH}/award1.png`,
+  award2: `${IMAGES_PATH}/award2.png`,
+  award3: `${IMAGES_PATH}/award3 (2).png`,
+  award4: `${IMAGES_PATH}/award4.png`,
+  
+  // Location/Find Us
+  FindUs: `${IMAGES_PATH}/FindUs (2).png`,
+  
+  // Menu item images
+  image1: `${IMAGES_PATH}/image1.png`,
+  image2: `${IMAGES_PATH}/image2.jpg`,
+  image3: `${IMAGES_PATH}/image3.jpg`,
+  image4: `${IMAGES_PATH}/image4.jpg`,
+  image5: `${IMAGES_PATH}/image5.jpg`,
+  image6: `${IMAGES_PATH}/image6.png`,
+  image7: `${IMAGES_PATH}/image7.png`,
+  image8: `${IMAGES_PATH}/image8.png`,
+  image9: `${IMAGES_PATH}/image9.png`,
+  image10: `${IMAGES_PATH}/image10.png`,
+  image11: `${IMAGES_PATH}/image11.png`,
+  image12: `${IMAGES_PATH}/image12.png`,
+  image13: `${IMAGES_PATH}/image13.png`,
+  image14: `${IMAGES_PATH}/image14.png`,
+  
+  // Restaurant showcase images
+  resimage1: `${IMAGES_PATH}/resimage1.jpeg`,
+  resimage2: `${IMAGES_PATH}/resimage2.jpeg`,
+  resimage3: `${IMAGES_PATH}/resimage3.jpeg`,
+  resimage4: `${IMAGES_PATH}/resimage4.jpeg`,
 };
+
+export default imageAssets;

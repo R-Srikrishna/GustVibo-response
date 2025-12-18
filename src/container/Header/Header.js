@@ -1,29 +1,33 @@
 import React, { useState } from 'react';
-import resimage1 from '../../Images/resimage1.jpeg'; 
-import resimage2 from '../../Images/resimage2.jpeg';
-import resimage3 from '../../Images/resimage3.jpeg';
-import resimage4 from '../../Images/resimage4.jpeg';
 import SubHeading from '../../components/SubHeading/SubHeading';
 import './Header.css';
 import { images } from '../../constants';
+
+// Restaurant showcase images paths
+const RESTAURANT_IMAGES = [
+  images.resimage1,
+  images.resimage2,
+  images.resimage3,
+  images.resimage4,
+];
 
 const Header = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [isEnlarged, setIsEnlarged] = useState(false);
 
-  const menuImages = [
-    resimage1,
-    resimage2,
-    resimage3,
-    resimage4,
-  ];
-
+  /**
+   * Handles the explore button click to show gallery animation
+   * Shows gallery, enlarges images, then hides after animation
+   */
   const handleExploreClick = () => {
     setShowGallery(true);
+    
+    // Trigger enlargement animation immediately
     setTimeout(() => {
       setIsEnlarged(true);
     }, 0); 
 
+    // Hide gallery after animation completes (1 second)
     setTimeout(() => {
       setIsEnlarged(false); 
       setShowGallery(false); 
@@ -52,11 +56,11 @@ const Header = () => {
           <div className="menu__gallery-content">
             <h2 className="gallery__heading">Our Hotel</h2>
             <div className="gallery__images">
-              {menuImages.map((image, index) => (
+              {RESTAURANT_IMAGES.map((image, index) => (
                 <img
                   key={index}
                   src={image}
-                  alt={`Menu ${index + 1}`}
+                  alt={`Restaurant showcase ${index + 1}`}
                   className={isEnlarged ? 'enlarged-image' : ''} 
                 />
               ))}

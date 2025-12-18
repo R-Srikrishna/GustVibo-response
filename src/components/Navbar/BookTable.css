@@ -1,5 +1,5 @@
 .bookTable {
-  max-width: 800px;
+  max-width: 900px;
   margin: 50px auto;
   padding: 30px;
   background: linear-gradient(135deg, #e2e2e2, #f4f4f4);
@@ -9,10 +9,80 @@
 
 .bookTable h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 28px;
   font-weight: bold;
   color: #333;
+}
+
+.booking-instructions {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-alert {
+  background: #fff5f5;
+  border: 2px solid #e74c3c;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  color: #e74c3c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  animation: slideDown 0.3s ease;
+}
+
+.error-alert .error-icon {
+  font-size: 20px;
+}
+
+.table-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.legend-color.available {
+  background-color: #27ae60;
+}
+
+.legend-color.booked {
+  background-color: #e74c3c;
 }
 
 .tables__grid {
@@ -25,29 +95,58 @@
   padding: 20px;
   text-align: center;
   border-radius: 8px;
-  cursor: pointer;
   font-weight: bold;
   color: white;
-  background-color: #777;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.table.empty {
-  background-color: #888;
-}
-
-.table.red-slotted {
-  background-color: #e74c3c;
-}
-
-.table.green-slotted {
+.table.available {
   background-color: #27ae60;
+  cursor: pointer;
 }
 
-.table:hover {
+.table.available:hover {
   transform: scale(1.05); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(39, 174, 96, 0.4);
+  background-color: #229954;
+}
+
+.table.booked {
+  background-color: #e74c3c;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.table.booked:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
+}
+
+.table-number {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.table-status-badge {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-status-badge.available-badge {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 @media screen and (max-width: 1150px) {

@@ -23,6 +23,22 @@ import './index.css';
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  // Set background image CSS variable for public folder assets
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .app__bg {
+        background-image: url('/images/bgGestvibo.jpeg');
+      }
+    `;
+    document.head.appendChild(style);
+    return () => {
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     const userData = localStorage.getItem('user');
     if (userData) {
