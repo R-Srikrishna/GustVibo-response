@@ -21,19 +21,21 @@ const UserDetails = () => {
   /**
    * Auto-fill form with logged-in user data
    */
-  useEffect(() => {
-    const userData = JSON.parse(localStorage.getItem('user') || 'null');
-    if (userData) {
-      setFormData({
-        name: userData.name || '',
-        email: userData.email || '',
-        phone: userData.number || '',
-      });
-    }
+ useEffect(() => {
+  const userData = JSON.parse(localStorage.getItem('user') || 'null');
 
-    // Check if table is already booked
-    checkTableAvailability();
-  }, [tableId]);
+  if (userData) {
+    setFormData({
+      name: userData.name || '',
+      email: userData.email || '',
+      phone: userData.number || '',
+    });
+  }
+
+  // Check if table is already booked
+  checkTableAvailability();
+}, [checkTableAvailability]);
+
 
   /**
    * Checks if the table is still available
