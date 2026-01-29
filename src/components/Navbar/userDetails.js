@@ -21,9 +21,33 @@ const UserDetails = () => {
   /**
    * Auto-fill form with logged-in user data
    */
- useEffect(() => {
-  const userData = JSON.parse(localStorage.getItem('user') || 'null');
 
+  /**
+ * Checks if the table is still available
+ */
+const checkTableAvailability = () => {
+  const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
+  const existingBooking = bookings.find(
+    (b) => b.tableId === parseInt(tableId) && b.status === 'confirmed'
+  );
+
+  if (existingBooking) {
+    setErrors({
+      name: '',
+      email: `Table ${tableId} is already booked. Please select another table.`,
+      phone: '',
+    });
+    setTimeout(() => {
+      navigate('/BookTable');
+    }, 3000);
+  }
+};
+
+/**
+ * Auto-fill form with logged-in user data
+ */
+useEffect(() => {
+  const userData = JSON.parse(localStorage.getItem('user') || 'null');
   if (userData) {
     setFormData({
       name: userData.name || '',
@@ -32,31 +56,9 @@ const UserDetails = () => {
     });
   }
 
-  // Check if table is already booked
   checkTableAvailability();
 }, [checkTableAvailability]);
 
-
-  /**
-   * Checks if the table is still available
-   */
-  const checkTableAvailability = () => {
-    const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
-    const existingBooking = bookings.find(
-      (b) => b.tableId === parseInt(tableId) && b.status === 'confirmed'
-    );
-
-    if (existingBooking) {
-      setErrors({
-        name: '',
-        email: `Table ${tableId} is already booked. Please select another table.`,
-        phone: '',
-      });
-      setTimeout(() => {
-        navigate('/BookTable');
-      }, 3000);
-    }
-  };
 
   /**
    * Validates email format
