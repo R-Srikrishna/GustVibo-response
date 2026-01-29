@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './userDetails.css';
 
@@ -25,7 +25,7 @@ const UserDetails = () => {
   /**
  * Checks if the table is still available
  */
-const checkTableAvailability = () => {
+const checkTableAvailability = useCallback(() => {
   const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
   const existingBooking = bookings.find(
     (b) => b.tableId === parseInt(tableId) && b.status === 'confirmed'
@@ -41,7 +41,8 @@ const checkTableAvailability = () => {
       navigate('/BookTable');
     }, 3000);
   }
-};
+}, [tableId, navigate]);
+
 
 /**
  * Auto-fill form with logged-in user data
@@ -58,6 +59,7 @@ useEffect(() => {
 
   checkTableAvailability();
 }, [checkTableAvailability]);
+
 
 
   /**
