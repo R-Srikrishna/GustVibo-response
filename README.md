@@ -1,70 +1,192 @@
-# Getting Started with Create React App
+# GUSTVIBO Restaurant Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive restaurant web application built with **React.js** that enables users to securely sign in, explore the restaurant, and book tables with real-time updates and instant booking confirmation.
 
-## Available Scripts
+## 🌐 Live Demo
 
-In the project directory, you can run:
+**Application:** https://gust-vibo-response.vercel.app/
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+GUSTVIBO is a dynamic restaurant web application designed to provide a smooth and interactive table reservation experience. The application focuses on an intuitive user interface, secure authentication, and real-time updates that instantly reflect successful bookings.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Features
 
-### `npm run build`
+* Secure user authentication (Sign In)
+* Responsive and user-friendly interface
+* Real-time table booking system
+* Instant booking confirmation
+* Dynamic restaurant view updates after booking
+* Smooth client-side navigation
+* Interactive React.js components
+* Fully deployed on Vercel
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Technology Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Frontend
 
-### `npm run eject`
+* React.js
+* JavaScript (ES6+)
+* HTML5
+* CSS3
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Vercel
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Project Structure
 
-## Learn More
+```text
+GUSTVIBO-Restaurant/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── styles/
+│   ├── App.js
+│   └── index.js
+│
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Getting Started
 
-### Code Splitting
+## Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Before running the project, ensure you have installed:
 
-### Analyzing the Bundle Size
+* Node.js
+* npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Clone the repository:
 
-### Advanced Configuration
+```bash
+git clone <repository-url>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Navigate to the project directory:
 
-### Deployment
+```bash
+cd <project-folder>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Install the required dependencies:
 
-### `npm run build` fails to minify
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Start the development server:
+
+```bash
+npm start
+```
+
+The application will be available at:
+
+```text
+http://localhost:3000
+```
+
+---
+
+# Application Workflow
+
+1. Open the application.
+2. Sign in to your account.
+3. Browse the restaurant interface.
+4. Select an available table.
+5. Confirm the booking.
+6. Receive an instant booking confirmation.
+7. The restaurant view updates automatically to reflect the latest booking.
+
+---
+
+# Core Functionalities
+
+## Authentication
+
+* Secure Sign In
+* Protected application navigation
+
+## Table Reservation
+
+* Real-time table availability
+* Instant booking confirmation
+* Dynamic UI updates after successful reservations
+
+## User Experience
+
+* Responsive design
+* Fast navigation
+* Interactive interface
+* Clean and modern layout
+
+---
+
+# Deployment
+
+The application is deployed using **Vercel**.
+
+**Live URL**
+
+https://gust-vibo-response.vercel.app/
+
+---
+
+# Future Enhancements
+
+* User Registration
+* Forgot Password functionality
+* Booking History
+* User Profile Management
+* Online Payment Integration
+* Email Notifications
+* Admin Dashboard
+* Restaurant Management System
+* Customer Reviews and Ratings
+* Dark Mode Support
+
+---
+
+# Screenshots
+
+You can include screenshots of:
+
+* Home Page
+* Sign In Page
+* Restaurant Dashboard
+* Table Booking Page
+* Booking Confirmation Page
+
+---
+
+# Author
+
+**R. Srikrishna**
+
+---
+
+# License
+
+This project is created for educational, learning, and portfolio purposes.
